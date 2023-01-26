@@ -1,1 +1,1 @@
-BASE_URI = 'https://petstore.swagger.io/v2/user'
+BASE_URI = "https://petstore.swagger.io/v2/user"

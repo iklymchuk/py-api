@@ -1,0 +1,10 @@
+{
+    "id": "unique_user_id",
+    "username": "unique_username",
+    "firstName": "py_api_firstName_updated",
+    "lastName": "py_api_lastName_updated",
+    "email": "string",
+    "password": "string",
+    "phone": "string",
+    "userStatus": 0
+}
