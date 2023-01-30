@@ -16,6 +16,20 @@ def create_unique_user(body):
     return body["username"]
 
 
+def update_user_data(body):
+    payload = dumps(body)
+
+    username = body["username"]
+
+    headers = {"Content-Type": "application/json", "Accept": "application/json"}
+
+    response = requests.put(url=f"{BASE_URI}/{username}", data=payload, headers=headers)
+
+    assert_that(response.status_code).is_equal_to(200)
+
+    return username
+
+
 def get_user_id_by_username(username):
     response = requests.get(f"{BASE_URI}/{username}")
     return response.status_code, response.json()["id"]
