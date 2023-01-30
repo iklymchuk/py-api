@@ -1,7 +1,6 @@
 import requests
-from assertpy.assertpy import assert_that
 from json import dumps
-from uuid import uuid4
+from assertpy.assertpy import assert_that
 
 from config import BASE_URI
 
@@ -12,6 +11,7 @@ def create_unique_user(body):
     headers = {"Content-Type": "application/json", "Accept": "application/json"}
 
     response = requests.post(url=BASE_URI, data=payload, headers=headers)
+    assert_that(response.status_code).is_equal_to(200)
 
     return body["username"]
 

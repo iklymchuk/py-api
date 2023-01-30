@@ -48,6 +48,7 @@ def test_new_user_can_be_updated(unique_user_data):
     )
     assert_that(response.status_code).is_equal_to(200)
 
+    # additional call for validation as PUT request doesn't send any data for validation
     response = requests.get(f"{BASE_URI}/{unique_username}")
     assert_that(response.status_code).is_equal_to(200)
 
