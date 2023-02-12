@@ -23,3 +23,7 @@ Try `which python`
 * Run tests by marker expressions: `https://docs.pytest.org/en/7.2.x/how-to/usage.html#usage`
 * Profile tests: `python -m pytest -vv --durations=10 --durations-min=1.0`
 * Distributed testing `https://pypi.org/project/pytest-xdist/`
+
+## Generate class.dot file for class diagram
+`pyreverse *` * if we are inside the project or path 
+
